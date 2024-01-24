@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/backend
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - '4000:3000'
+
+  db:
+    container_name: mysql-tuyotuyo
+    image: mysql:8.0
+    ports:
+      - '3006:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=prj-calendar
+      - MYSQL_DATABASE=prj-calendar
+      - MYSQL_USER=tuyotuyo
+      - MYSQL_PASSWORD=tuyotuyo
+      - TZ=Asia/Tokyo
+    volumes:
+      - data:/var/lib/mysql
+
+volumes:
+  data:
