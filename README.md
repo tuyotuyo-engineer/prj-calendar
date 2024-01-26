@@ -6,6 +6,8 @@
 
 - タスク管理：[GitHub Project](https://github.com/orgs/tuyotuyo-engineer/projects/3)
 
+- UI/UX デザイン：[Figma](https://www.figma.com/file/tdjImialhQCRy7HLvra4ZE/prj-calendar?type=design&node-id=0%3A1&mode=design&t=tCMQuHPHwUluamcK-1)
+
 ## バックエンド開発コマンド
 
 ```bash
