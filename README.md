@@ -92,3 +92,4 @@ docker-compose exec frontend bash
 - mainへはマージしないdevへマージする事
 - ブランチは[prefix]/[name]で運用する
   - prefixは次を使用する `feature` `bugfix` `modify`
+- コミットにはgitmojiを使用する
