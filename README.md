@@ -89,3 +89,6 @@ docker-compose exec frontend bash
 - 基本的には空タグは`<>`で記述しkeyを使用する場合などに`Fragment`を使用する
 - 全角スペースは使用禁止
 - ネストは2階層まで
+- mainへはマージしないdevへマージする事
+- ブランチは[prefix]/[name]で運用する
+  - prefixは次を使用する `feature` `bugfix` `modify`
