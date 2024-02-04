@@ -79,3 +79,13 @@ docker-compose exec backend bash
 コンテナ内で各種インストール
 docker-compose exec frontend bash
 ```
+
+## 開発ルール
+
+### 各種ルール
+- コンポーネントは`Chat.tsx`の様にする
+- exportは名前付きで行う
+- 型定義はtypeで定義する
+- 基本的には空タグは`<>`で記述しkeyを使用する場合などに`Fragment`を使用する
+- 全角スペースは使用禁止
+- ネストは2階層まで
