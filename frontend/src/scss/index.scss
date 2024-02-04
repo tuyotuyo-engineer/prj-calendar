@@ -28,6 +28,11 @@
   justify-content: center;
 }
 
+.section-base {
+  border: 3px solid white;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
 // SP
 @media (max-width: #{$BREAK-POINT + px}) {
 }
