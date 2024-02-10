@@ -20,7 +20,8 @@ const config: Config = {
         sub: '#FFF',
         text: '#444',
         'custom-gray': '#D9D9D9',
-        'custom-black': '#444444'
+        'custom-black': '#444444',
+        'text-light-gray': '#999999',
       },
     },
   },
