@@ -14,8 +14,8 @@ const dateTime = `2024.02.10`;
 
 function Chat() {
   return (
-    <div className='w-[32rem] bg-white/75 rounded-[25px] border-solid border-[3px] border-white flex-col py-[1rem] px-[1rem]'>
-      <div className='w-full h-[45.6rem] bg-custom-gray'>
+    <div className='w-[32rem] bg-white/75 rounded-[25px] border-custom-gray border-[3px] flex-col py-[1rem] px-[1rem]'>
+      <div className='w-full h-[45.6rem]'>
         <ChatDate dateTime={dateTime}/>
         <ChatUserHead chatUserName={chatUserName} />
         <ChatMessage message={message} time={time}/>
