@@ -3,6 +3,10 @@ import { IconUser, SubmitIcon } from '@/icons';
 import React from 'react';
 import { ChatUserHead } from './atoms/ChatUserHead';
 import { ChatDate } from './atoms/ChatDate';
+import { ChatMessage } from './atoms/ChatMessage';
+
+const message = '今日はPHPの勉強をします!';
+const time = '12:00';
 
 function Chat() {
   return (
@@ -10,6 +14,7 @@ function Chat() {
       <div className='w-full h-[45.6rem] bg-custom-gray'>
         <ChatDate />
         <ChatUserHead />
+        <ChatMessage message={message} time={time}/>
       </div>
       <div className='flex justify-between items-center mt-[1rem] bg-white/50 rounded-[18px] border border-gray-200'>
         <input
