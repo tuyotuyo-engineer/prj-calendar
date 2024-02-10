@@ -1,8 +1,7 @@
 import { IconUser } from '@/icons';
+import { ChatUserHeadProps } from '../../chat.types';
 
-const chatUserName = 'Hoge Foo';
-
-export const ChatUserHead = () => {
+export const ChatUserHead = ({chatUserName}: ChatUserHeadProps) => {
   return (
     <div className='flex h-[2rem] items-center gap-2 my-[0.5rem]'>
       <IconUser />
