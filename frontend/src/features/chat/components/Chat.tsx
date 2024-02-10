@@ -5,6 +5,7 @@ import { ChatUserHead } from './atoms/ChatUserHead';
 import { ChatDate } from './atoms/ChatDate';
 import { ChatMessage } from './atoms/ChatMessage';
 import { ChatMyMessage } from './atoms/ChatMyMessage';
+import { MessageForm } from './atoms/MessageForm';
 
 const message = '今日はPHPの勉強をします!';
 const time = '12:00';
@@ -20,15 +21,7 @@ function Chat() {
         <ChatMessage message={message} time={time}/>
         <ChatMyMessage message={message} time={time}/>
       </div>
-      <div className='flex justify-between items-center mt-[1rem] bg-white/50 rounded-[18px] border border-gray-200'>
-        <input
-          className='w-full h-[4rem] rounded-l-[18px] py-[1rem] px-[1.2rem] outline-none'
-          placeholder='メッセージを入力'
-        />
-        <button className='p-[1rem] rounded-r-[18px]'>
-          <SubmitIcon />
-        </button>
-      </div>
+      <MessageForm />
     </div>
   );
 }

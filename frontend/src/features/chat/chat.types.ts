@@ -10,3 +10,7 @@ export type ChatUserHeadProps = {
 export type ChatDateProps = {
   dateTime: string;
 };
+
+export type MessageFormProps = {
+  message: string;
+};
