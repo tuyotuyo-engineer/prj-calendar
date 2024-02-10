@@ -8,7 +8,9 @@ export default function Calendar() {
       <div className="flex h-full">
         <div className="flex flex-col w-[32rem] bg-yellow-300"></div>
         <div className="flex w-full bg-blue-300"></div>
-        <div className="flex flex-col w-[32rem] bg-green-300"></div>
+        <div className="flex flex-col w-[32rem] bg-green-300">
+          <Chat />
+        </div>
       </div>
     </main>
   );

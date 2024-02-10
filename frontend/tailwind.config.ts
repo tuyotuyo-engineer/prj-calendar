@@ -19,6 +19,7 @@ const config: Config = {
         main: '#FFF',
         sub: '#FFF',
         text: '#444',
+        'custom-gray': '#D9D9D9'
       },
     },
   },
