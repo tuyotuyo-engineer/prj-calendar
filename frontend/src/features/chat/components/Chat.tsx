@@ -4,6 +4,7 @@ import React from 'react';
 import { ChatUserHead } from './atoms/ChatUserHead';
 import { ChatDate } from './atoms/ChatDate';
 import { ChatMessage } from './atoms/ChatMessage';
+import { ChatMyMessage } from './atoms/ChatMyMessage';
 
 const message = '今日はPHPの勉強をします!';
 const time = '12:00';
@@ -17,6 +18,7 @@ function Chat() {
         <ChatDate dateTime={dateTime}/>
         <ChatUserHead chatUserName={chatUserName} />
         <ChatMessage message={message} time={time}/>
+        <ChatMyMessage message={message} time={time}/>
       </div>
       <div className='flex justify-between items-center mt-[1rem] bg-white/50 rounded-[18px] border border-gray-200'>
         <input
