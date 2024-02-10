@@ -14,3 +14,7 @@ export type ChatDateProps = {
 export type MessageFormProps = {
   message: string;
 };
+
+export type ChatTimeProps = {
+  time: string;
+}
