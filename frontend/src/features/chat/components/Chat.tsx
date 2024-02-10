@@ -10,7 +10,7 @@ const time = '12:00';
 
 function Chat() {
   return (
-    <div className='w-[32rem] h-[536px] bg-white/75 rounded-[25px] border-solid border-[3px] border-white flex-col py-[2rem] px-[1rem]'>
+    <div className='w-[32rem] bg-white/75 rounded-[25px] border-solid border-[3px] border-white flex-col py-[1rem] px-[1rem]'>
       <div className='w-full h-[45.6rem] bg-custom-gray'>
         <ChatDate />
         <ChatUserHead />
