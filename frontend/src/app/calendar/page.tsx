@@ -4,9 +4,9 @@ import Chat from '@/features/chat/components/Chat';
 
 export default function Calendar() {
   return (
-    <main className='flex flex-col gap-8 h-screen px-12 py-16 bg-red-400'>
+    <main className='flex flex-col gap-8 h-full px-12 py-16 bg-red-400'>
       <Header />
-      <div className='flex h-full'>
+      <div className='flex'>
         <div className='flex flex-col w-[32rem] bg-yellow-300'></div>
         <div className='w-full bg-blue-300 px-[4rem]'>
           <Schedule />
