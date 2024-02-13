@@ -1,5 +1,5 @@
 import { Header } from '@/components/organisms/Header/Header.organism';
-import Chat from '@/features/chat/components/Chat';
+import { Chat } from '@/features/chat/components/Chat';
 
 export default function Calendar() {
   return (
