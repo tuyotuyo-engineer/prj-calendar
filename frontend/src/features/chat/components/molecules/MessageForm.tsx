@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { SubmitIcon } from "@/icons";
-import { MessageFormProps } from "../../chat.types";
+import { SubmitIcon } from '@/icons';
+import { MessageFormProps } from '../../chat.types';
+import { Button } from '@/components/atoms/Button/Button.atom';
 
 export const MessageForm = () => {
   const [message, setMessage] = useState<MessageFormProps['message']>('');
@@ -17,9 +18,13 @@ export const MessageForm = () => {
         value={message}
         onChange={handleInputChange}
       />
-      <button className='p-[1rem] rounded-r-[18px]'>
+      <Button
+        onClick={() => console.log('click')}
+        variant='primary'
+        className='p-[1rem] rounded-r-[18px]'
+      >
         <SubmitIcon />
-      </button>
+      </Button>
     </div>
   );
 };
