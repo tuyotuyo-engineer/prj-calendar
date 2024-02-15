@@ -1,6 +1,15 @@
+import dayjs from "dayjs";
+
+export enum UserType {
+  Self = "self",
+  Other = "other",
+}
+
 export type ChatMessageProps = {
+  userType: UserType;
+  userName: string;
   message: string;
-  time: string;
+  specificDateTime: dayjs.Dayjs;
 };
 
 export type ChatUserHeadProps = {
