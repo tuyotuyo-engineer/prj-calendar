@@ -23,9 +23,6 @@ const config: Config = {
         'custom-black': '#444444',
         'light-gray': '#999999',
       },
-      fontFamily: {
-        'noto-sans-jp': ['Noto Sans JP', 'sans-serif'],
-      },
     },
   },
   plugins: [],
