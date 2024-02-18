@@ -1,8 +1,9 @@
+import { Button } from '@/components/atoms/Button/Button.atom';
 import React from 'react';
 
 type Props = {
   title?: string;
-  onClick?: () => void;
+  onClick: () => void;
 };
 
 export const AddGroupUser = ({
@@ -10,11 +11,12 @@ export const AddGroupUser = ({
   onClick,
 }: Props) => {
   return (
-    <div
-      className="text-text text-3xl text-right cursor-pointer"
+    <Button
+      className="text-right"
       onClick={onClick}
+      variant='none'
     >
       {title}
-    </div>
+    </Button>
   );
 };
