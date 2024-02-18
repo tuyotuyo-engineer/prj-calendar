@@ -1,4 +1,4 @@
-import { TasksProps } from '../types';
+import { TasksProps } from '../../types';
 
 export const Tasks = ({ taskTitle }: TasksProps) => {
   return (

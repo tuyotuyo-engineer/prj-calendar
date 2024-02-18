@@ -1,4 +1,4 @@
-import { Tasks } from './Tasks';
+import { Tasks } from '../atoms/Tasks';
 
 // 時間軸のリストを作成する関数
 function createTimesList() {
