@@ -1,9 +1,6 @@
-type CheckBoxProps = {
-  selected: boolean;
-  onChange: () => void;
-};
+import { CheckBoxType } from '../atom.type';
 
-export const CheckBox = ({ selected, onChange }: CheckBoxProps) => {
+export const CheckBox = ({ selected, onChange }: CheckBoxType) => {
   return (
     <input
       type="checkbox"

@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 const UserList = [
   {
-    name: 'Hiroki Tetuya',
+    name: 'Hiroki Tetuka',
     selected: true,
   },
   {
@@ -27,14 +27,14 @@ const UserList = [
     selected: false,
   },
   {
-    name: 'Super Unco',
+    name: 'Yamada Tarou',
     selected: true,
   },
 ];
 
 const OtherUserList = [
   {
-    name: 'Hiroki Tetuya',
+    name: 'Hiroki Tetuka',
     selected: true,
   },
   {
@@ -46,23 +46,23 @@ const OtherUserList = [
     selected: false,
   },
   {
-    name: 'Super Unco',
+    name: 'Yamada Tarou',
     selected: true,
   },
   {
-    name: 'Unco',
+    name: 'Tanaka Hanako',
     selected: true,
   },
   {
-    name: 'Unco？',
+    name: 'Suzuki Jirou',
     selected: true,
   },
   {
-    name: 'Super Unco！',
+    name: 'Yamamoto Taro',
     selected: true,
   },
   {
-    name: 'Super Unco！！！',
+    name: 'Sato Hanako',
     selected: true,
   },
 ];
@@ -72,5 +72,5 @@ export const Default: Story = {
 };
 
 export const ManyUser: Story = {
-  args: { groupName: '秘密結社UNCO', initUserList: OtherUserList },
+  args: { groupName: 'エンジニアの集い', initUserList: OtherUserList },
 };

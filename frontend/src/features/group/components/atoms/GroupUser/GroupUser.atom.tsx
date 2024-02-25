@@ -11,7 +11,7 @@ export const GroupUser = ({ name, selected, onChange }: Props) => {
   return (
     <label className="flex items-center gap-4 cursor-pointer">
       <CheckBox selected={selected} onChange={onChange} />
-      <div className="text-text text-[1.8rem]">{name}</div>
+      <span className="text-text text-[1.8rem]">{name}</span>
     </label>
   );
 };
