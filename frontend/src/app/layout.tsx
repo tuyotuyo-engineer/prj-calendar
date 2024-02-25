@@ -2,7 +2,11 @@ import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
 import '../scss/index.scss';
 
-const notoSansJP = Noto_Sans_JP({ subsets: ['latin'] });
+const notoSansJP = Noto_Sans_JP({
+  weight: '400',
+  display: 'swap',
+  preload: false,
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
