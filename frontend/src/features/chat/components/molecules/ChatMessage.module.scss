@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  align-items: end;
+  margin-bottom: 0.8rem;
+
+  &.self {
+    flex-direction: row-reverse;
+  }
+
+  &.other {
+    flex-direction: row;
+  }
+}

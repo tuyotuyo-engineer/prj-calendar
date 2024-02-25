@@ -1,10 +1,11 @@
 'use client';
 import React from 'react';
-import { ChatDate } from './atoms/ChatDate';
-import { ChatMessage } from './molecules/ChatMessage';
-import { MessageForm } from './molecules/MessageForm';
+import { ChatDate } from './atoms/ChatDate.atom';
+import { ChatMessage } from './molecules/ChatMessage.molecules';
+import { MessageForm } from './molecules/MessageForm.molecules';
 import { UserType } from '../chat.types';
 import dayjs from 'dayjs';
+import { ChatHistory } from './organisms/ChatHistory.organisms';
 
 const mockData1 = {
   userType: UserType.Other,
@@ -16,11 +17,26 @@ const mockData1 = {
 const mockData2 = {
   userType: UserType.Self,
   userName: '田中 一郎',
-  specificDateTime: dayjs(),
+  specificDateTime: dayjs().add(5, 'minute'),
   message: '頑張ってください!',
 };
 
-const mockData = [mockData1, mockData2];
+const mockData = [
+  mockData1,
+  mockData2,
+  mockData1,
+  mockData2,
+  mockData1,
+  mockData2,
+  mockData1,
+  mockData2,
+  mockData1,
+  mockData2,
+  mockData1,
+  mockData2,
+  mockData1,
+  mockData2,
+];
 
 // 日付のみをフォーマット
 const datePart = mockData1.specificDateTime.format('YYYY-MM-DD');
@@ -29,10 +45,10 @@ const timePart = mockData1.specificDateTime.format('HH:mm');
 
 export function Chat() {
   return (
-    <div className='section-base flex flex-col w-[32rem] px-4 pt-8 pb-4 rounded-[25px]'>
-      <div className='w-full h-[45.6rem]'>
+    <div className='section-base flex flex-col w-[32rem] px-2 pt-8 pb-4 rounded-[25px]'>
+      <div className='w-full h-[45.6rem] overflow-y-scroll'>
         <ChatDate dateTime={datePart} />
-        <ChatMessage mockData={mockData} />
+        <ChatHistory mockData={mockData} />
       </div>
       <MessageForm />
     </div>

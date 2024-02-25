@@ -5,25 +5,25 @@ export enum UserType {
   Other = "other",
 }
 
-export type ChatMessageProps = {
+export type ChatMessageType = {
   userType: UserType;
   userName: string;
   message: string;
   specificDateTime: dayjs.Dayjs;
 };
 
-export type ChatUserHeadProps = {
+export type ChatUserHeadType = {
   chatUserName: string;
 };
 
-export type ChatDateProps = {
+export type ChatDateType = {
   dateTime: string;
 };
 
-export type MessageFormProps = {
+export type MessageFormType = {
   message: string;
 };
 
-export type ChatTimeProps = {
+export type ChatTimeType = {
   time: string;
 }
