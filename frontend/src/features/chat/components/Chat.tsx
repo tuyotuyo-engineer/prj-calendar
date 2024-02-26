@@ -21,22 +21,7 @@ const mockData2 = {
   message: '頑張ってください!',
 };
 
-const mockData = [
-  mockData1,
-  mockData2,
-  mockData1,
-  mockData2,
-  mockData1,
-  mockData2,
-  mockData1,
-  mockData2,
-  mockData1,
-  mockData2,
-  mockData1,
-  mockData2,
-  mockData1,
-  mockData2,
-];
+const mockData = new Array(7).fill([mockData1, mockData2]).flat();
 
 // 日付のみをフォーマット
 const datePart = mockData1.specificDateTime.format('YYYY-MM-DD');
