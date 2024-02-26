@@ -1,11 +1,12 @@
 'use client';
 import React from 'react';
-import { ChatDate } from './atoms/ChatDate.atom';
-import { ChatMessage } from './molecules/ChatMessage.molecules';
-import { MessageForm } from './molecules/MessageForm.molecules';
-import { UserType } from '../chat.types';
 import dayjs from 'dayjs';
+
+import { ChatDate } from './atoms/ChatDate.atom';
+import { MessageForm } from './molecules/MessageForm.molecules';
 import { ChatHistory } from './organisms/ChatHistory.organisms';
+
+import { UserType } from '../chat.types';
 
 const mockData1 = {
   userType: UserType.Other,
