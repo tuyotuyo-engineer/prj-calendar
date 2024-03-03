@@ -1,20 +1,29 @@
-export type ChatMessageProps = {
+import dayjs from "dayjs";
+
+export enum UserType {
+  Self = "self",
+  Other = "other",
+}
+
+export type ChatMessageType = {
+  userType: UserType;
+  userName: string;
   message: string;
-  time: string;
+  specificDateTime: dayjs.Dayjs;
 };
 
-export type ChatUserHeadProps = {
+export type ChatUserHeadType = {
   chatUserName: string;
 };
 
-export type ChatDateProps = {
+export type ChatDateType = {
   dateTime: string;
 };
 
-export type MessageFormProps = {
+export type MessageFormType = {
   message: string;
 };
 
-export type ChatTimeProps = {
+export type ChatTimeType = {
   time: string;
 }

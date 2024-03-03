@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.8rem;
+
+  &.self {
+    flex-direction: row-reverse;
+  }
+
+  &.other {
+    flex-direction: row;
+  }
+}
+
+.box {
+  padding: 0.6rem 1rem;
+  border-radius: 1.8rem;
+
+  &.self {
+    background-color: white;
+  }
+
+  &.other {
+    background-color: #999999;
+  }
+}
+
+.text {
+  overflow-wrap: break-word;
+
+  &.self {
+    color: var(--text-color);
+  }
+
+  &.other {
+    color: white;
+  }
+}

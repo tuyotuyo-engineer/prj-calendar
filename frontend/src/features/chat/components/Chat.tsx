@@ -1,29 +1,42 @@
 'use client';
-import { IconUser, SubmitIcon } from '@/icons';
 import React from 'react';
-import { ChatUserHead } from './molecules/ChatUserHead';
-import { ChatDate } from './atoms/ChatDate';
-import { ChatMessage } from './molecules/ChatMessage';
-import { ChatMyMessage } from './molecules/ChatMyMessage';
-import { MessageForm } from './molecules/MessageForm';
+import dayjs from 'dayjs';
 
-const message = '今日はPHPの勉強をします!';
-const time = '12:00';
-const chatUserName = '山田 太郎';
-const dateTime = `2024.02.10`;
+import { ChatDate } from './atoms/ChatDate.atom';
+import { MessageForm } from './molecules/MessageForm.molecules';
+import { ChatHistory } from './organisms/ChatHistory.organisms';
 
-function Chat() {
+import { UserType } from '../chat.types';
+
+const mockData1 = {
+  userType: UserType.Other,
+  userName: '山田 太郎',
+  specificDateTime: dayjs(),
+  message: '今日はPHPの勉強をします!',
+};
+
+const mockData2 = {
+  userType: UserType.Self,
+  userName: '田中 一郎',
+  specificDateTime: dayjs().add(5, 'minute'),
+  message: '頑張ってください!',
+};
+
+const mockData = new Array(7).fill([mockData1, mockData2]).flat();
+
+// 日付のみをフォーマット
+const datePart = mockData1.specificDateTime.format('YYYY-MM-DD');
+// 時刻のみをフォーマット
+const timePart = mockData1.specificDateTime.format('HH:mm');
+
+export function Chat() {
   return (
-    <div className='w-[32rem] bg-white/75 rounded-[25px] border-custom-gray border-[3px] flex-col py-[1rem] px-[1rem]'>
-      <div className='w-full h-[45.6rem]'>
-        <ChatDate dateTime={dateTime} />
-        <ChatUserHead chatUserName={chatUserName} />
-        <ChatMessage message={message} time={time} />
-        <ChatMyMessage message={message} time={time} />
+    <div className='section-base flex flex-col w-[32rem] px-2 pt-8 pb-4 rounded-[25px]'>
+      <div className='w-full h-[45.6rem] overflow-y-scroll'>
+        <ChatDate dateTime={datePart} />
+        <ChatHistory mockData={mockData} />
       </div>
       <MessageForm />
     </div>
   );
 }
-
-export default Chat;
