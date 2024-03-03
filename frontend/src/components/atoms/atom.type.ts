@@ -4,7 +4,7 @@ export type ButtonType = {
   disabled?: boolean;
   onClick: () => void;
   type?: "button" | "submit" | "reset";
-  variant: "primary" | "secondary" | "header" | "none";
+  variant: "primary" | "secondary" | "header" | "tagEdit" | "none";
 };
 
 export type CheckBoxType = {
