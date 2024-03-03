@@ -6,3 +6,8 @@ export type ButtonType = {
   type?: "button" | "submit" | "reset";
   variant: "primary" | "secondary" | "header" | "tagEdit" | "none";
 };
+
+export type CheckBoxType = {
+  selected: boolean;
+  onChange: () => void;
+};
