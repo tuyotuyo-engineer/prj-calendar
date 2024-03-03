@@ -12,6 +12,7 @@
     "gen:icons": "./scripts/generate-icons.sh"
   },
   "dependencies": {
+    "@next/font": "^14.1.0",
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
     "next": "14.0.4",
