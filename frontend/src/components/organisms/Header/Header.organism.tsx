@@ -5,10 +5,13 @@ import { CurrentDate } from '@/components/atoms/CarrentDate/CurrentDate.atom';
 import { Button } from '@/components/atoms/Button/Button.atom';
 import { ArrowIcon } from '@/components/icons/Arrow/Arrow.icon';
 import { Logo } from '@/components/atoms/Logo/Logo.atom';
-import { useUpdateDate } from '@/reducks/date/dispatches';
+import {
+  useNextDay,
+  usePrevDay,
+  useUpdateDate,
+} from '@/reducks/date/dispatches';
 
 export const Header = () => {
-  const handleClick = () => {};
   return (
     <header className='section-base flex items-center justify-between px-12 py-9 rounded-full'>
       <div className='flex-center gap-12'>
@@ -24,10 +27,20 @@ export const Header = () => {
           今日
         </Button>
         <div className='flex gap-12'>
-          <Button onClick={handleClick} variant='none'>
+          <Button
+            onClick={() => {
+              usePrevDay();
+            }}
+            variant='none'
+          >
             <ArrowIcon direction='left' />
           </Button>
-          <Button onClick={handleClick} variant='none'>
+          <Button
+            onClick={() => {
+              useNextDay();
+            }}
+            variant='none'
+          >
             <ArrowIcon direction='right' />
           </Button>
         </div>
