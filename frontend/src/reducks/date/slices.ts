@@ -8,5 +8,5 @@ const dateSlice = createSlice({
   reducers: dateReducers.reducers,
 });
 
-export const { nextMonth, prevMonth } = dateSlice.actions;
+export const { nextMonth, prevMonth, updateDate } = dateSlice.actions;
 export default dateSlice;

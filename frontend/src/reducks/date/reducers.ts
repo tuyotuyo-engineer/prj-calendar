@@ -1,3 +1,4 @@
+import { PayloadAction } from '@reduxjs/toolkit';
 import { DateStateType } from './types';
 
 const reducers = {
@@ -15,6 +16,12 @@ const reducers = {
     return {
       ...state,
       currentDate: newDate.toISOString(),
+    };
+  },
+  updateDate: (state: DateStateType, action: PayloadAction<string>) => {
+    return {
+      ...state,
+      currentDate: action.payload,
     };
   },
 };
