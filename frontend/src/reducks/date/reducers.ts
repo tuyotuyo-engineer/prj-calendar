@@ -29,7 +29,6 @@ const reducers = {
   },
   prevMonth: (state: DateStateType) => {
     const newDate = new Date(state.currentDate);
-    newDate.setMonth(newDate.getMonth() - 1);
     newDate.setDate(0);
     return {
       ...state,
